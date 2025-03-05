@@ -95,7 +95,7 @@ module Stellate
       elsif callback.is_a?(Symbol) && method(callback).is_a?(Method)
         method(callback).call(stellate_request)
       else
-        run_stellate_request(stellate_request)
+        Stellate.run_stellate_request(stellate_request)
       end
 
       result
@@ -151,7 +151,7 @@ module Stellate
       elsif callback.is_a?(Symbol) && method(callback).is_a?(Method)
         method(callback).call(stellate_request)
       else
-        run_stellate_request(stellate_request)
+        Stellate.run_stellate_request(stellate_request)
       end
     end
   end
